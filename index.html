@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Personal Website">
+    <meta name="keywords" content="Christina Ta" />
+    <meta name="author" content="Christina Ta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <title> Christina Ta </title>
+
+    <link href="/bio/style/style.css" rel="stylesheet">
+    <script defer src="/fontawesome/js/all.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <div id="headerWrapper">
+      <header id="header">
+        <div id="headerInfo">
+          <h1 class="logo site-title" style="letter-spacing: 0em;">
+            <span class="placed-site-title">Christina Ta: Web Developer</span>
+            </a>
+          </h1>
+          <div id="navBlock" role="navigation">
+            <nav class="main-nav" data-content-field="navigation">
+              <ul>
+                <li class="page-collection">
+                  <a href="/bio/resume.pdf" target="_blank">Resume</a>
+                </li>
+                <li class="external-link">
+                  <a href="https://facebook.com/christinaqta" target="_blank">Facebook</a>
+                </li>
+                <li class="external-link">
+                  <a href="https://github.com/christinata" target="_blank">GitHub</a>
+                </li>
+                <li class="external-link">
+                  <a href="https://www.linkedin.com/in/lechristinata" target="_blank">LinkedIn</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="mySlides fade">
+      <img src="/bio/style/slideshow/career-showcase2020.jpg" style="width:25%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="/bio/style/slideshow/colorado2019.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="/bio/style/slideshow/miami2020.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="/bio/style/slideshow/georgia2019.jpg" style="width:50%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+    </script>
+    <!-- About-->
+    <div id="about">
+      <div class="inner">
+        <div>
+          <p>
+            Hello World! My name is Christina and I am a developer and designer.
+          </p>
+        </div>
+        <br />
+        <!-- Console -->
+        <div id="code">
+          <div id="console">
+            &gt; echo Christina.home<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; "Bradenton, FL"<br /></span>
+            &gt; echo Christina.education<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; "University of Florida"<br /></span>
+            &gt; echo Christina.major<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; "Computer Science"<br /></span>
+            &gt; echo Christina.interests<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; ["Web Development", "Coding", "Animation", "Brunch"]<br /></span>
+            &gt; echo Christina.workExperience.latest<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; Latest Work Experience<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; company: "Savannah River Remediation"<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; role: "Data Acquisition Intern"<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; startDate: "May 2019"<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endDate: "August 2019"<br />
+            </span>
+            &gt; echo Christina.contact<br />
+            <span class="answer">&nbsp;&nbsp;=&gt; <a target="_blank" href="mailto:le.christinata@gmail.com">le.christinata@gmail.com</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div id="education">
+      <div class="inner">
+				<p class="section-tagline" style="text-align:left;">Education</p>
+				<!-- Education : UF -->
+				<p>
+					<a target="_blank" href="http://ufl.edu"><img class="icon" src="/bio/style/icons/ufemblem.jpg"></a><b>University of Florida</b>
+					<span class="right"><i>August 2015 - May 2020</i></span><br/><b>Computer Science, B.S.</b>
+					<span class="right"><i>Gainesville, FL</i></span><br/><br/>
+						Relevant Coursework:<br/>
+						<ul style="list-style:circle;">
+              <li>Programming Fundamentals I</li>
+              <li>Programming Fundamentals II</li>
+              <li>Intro to Computer Orgranization</li>
+              <li>Applied Discrete Structures</li>
+              <li>Infomation & Database Systems</li>
+              <li>Data Structures & Algorithms</li>
+              <li>Intro to Software Engineering</li>
+              <li>Operating Systems</li>
+              <li>Engineering Statistics</li>
+              <li>Computational Linear Algebra</li>
+              <li>Numerical Analysis Computation</li>
+              <li>Professional Ethics</li>
+              <li>Engineering Innovations</li>
+              <li>Professional Communication for Engineers</li>
+              <li>Computer-Aided Modeling</li>
+              <li>Senior Design</li>
+						</ul>
+
+          <span class="skill">Java</span>
+					<span class="skill">C/C++</span>
+          <span class="skill">SQL</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">MEAN STACK</span>
+          <span class="skill">Git/Github</span>
+          <span class="skill">R</span>
+          <span class="skill">MATLAB</span>
+          <span class="skill">Blender</span>
+          <span class="skill">PHP</span>
+          <span class="skill">Bootstrap</span>
+          <span class="skill">JQuery</span>
+				</p>
+				<br/>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div id="experience">
+      <div class="inner">
+        <p class="section-tagline" style="text-align:left;">Experience</p>
+        <p>
+         <a target="_blank" href="https://srremediation.com/index.html"><img class="icon" src="/bio/style/icons/srr.jpg"></a><b> DOE Savannah River Remediation</b>
+         <span class="right"><i>May 2019 - August 2019</i></span><br/>
+         <b>Data Acquisition Intern</b>
+         <span class="right"><i>Aiken, SC</i></span><br/><br/>
+         <ul style="list-style:circle;">
+           <li>Developed a tool using Microsoft Excel that would calculate the overall hours worked daily, weekly, monthly
+               and yearly based on the recorded overtime logs</li>
+           <li>Developed a tool that would manage a 600-page manual using Microsoft Word, Excel and Adobe Reader</li>
+           <li>Assisted in presentations and weekly progress meetings</li>
+           <li>Demonstrated projects in the presence of managers, mentors and fellow colleagues that proved a better
+               quality of work.</li>
+         </ul>
+         <span class="skill">Data Analyzing</span>
+         <span class="skill">Microsoft Word</span>
+         <span class="skill">Microsoft Excel</span>
+         <span class="skill">Microsoft PowerPoint</span>
+         <span class="skill">Adobe Reader</span>
+         <span class="skill">Presentation Skills</span>
+         <span class="skill">Communication Skills</span>
+
+        </p>
+       <br/>
+     </div>
+   </div>
+
+   <!-- Projects-->
+   <div id="projects">
+     <div class="inner">
+       <p class="section-tagline" style="text-align:left;">Projects</p><br>
+       <!-- Console -->
+       <div id="code">
+         <div id="console">
+           &gt; echo $virtualStudyBuddy<br />
+           <span class="answer">&nbsp;&nbsp;=&gt; Senior Design Project<br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; role: "Front-End Developer"<br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; languages: "HTML, CSS, JavaScript"<br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; description: "Flash Card Web Application: User can create flash cards and test their knowledge via Google Home for human-computer interaction."<br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; functions: "Create/Edit/Delete Decks with Google Account."<br />
+           </span>
+           &gt; echo $parkingPicker<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; role: "Front-End Developer"<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; languages: "HTML, CSS, JavaScript, MEAN Stack"<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; description: "Web Application that students can use to track parking spots on UF campus."<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; functions: "Choose specific parking lot(s), view/rate lot capacity, allocate parking spot. "<br />
+           &gt; echo $shanghaiNailsSpa<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; role: "Web Developer"<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; languages: "HTML, CSS, JavaScript"<br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; description: "Small Business Website."<br />
+         </div>
+       </div>
+     </div>
+   </div>
+   <br><br><br>
+
+   <div id="footerWrapper">
+ 			<footer id="footer">
+ 				<div id="social" class="social-links">
+ 					<a class="social-icon" href="//www.facebook.com/christinaqta" target="_blank"><i class="fab fa-facebook"></i></a>
+ 					<a class="social-icon" href="//www.linkedin.com/in/lechristinata/" target="_blank"><i class="fab fa-linkedin"></i></a>
+ 					<a class="social-icon" href="//www.instagram.com/christinata_" target="_blank"><i class="fab fa-instagram"></i></a>
+ 					<a class="social-icon" href="//www.github.com/christinata" target="_blank"><i class="fab fa-github"></i></a>
+ 				</div>
+ 				<div id="footerBlock">
+ 					<p style="margin: 0; text-align: center; font-size: 14px;">
+ 						Copyright © <?php echo date("Y"); ?>, Christina Ta. All Rights Reserved.
+ 					</p>
+ 				</div>
+ 			</footer>
+ 		</div>
+
+
+
+
+
+
+  </body>
+
+</html>
