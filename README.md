@@ -3,7 +3,7 @@ This is a personal website I made.
 I used the following languages:
   - HTML (of course)
   - CSS (what else?)
-  - PHP (Not JavaScript!)
+  - JavaScript
 <!--
 **christinata/christinata** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
